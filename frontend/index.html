@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Analyser</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Resume Analyser</h1>
+        <p>Check how well your resume matches a job description.</p>
+
+        <form id="resumeForm">
+            <label for="resume">Upload Resume (PDF)</label>
+            <input type="file" id="resume" accept=".pdf" required>
+
+            <label for="jobDescription">Job Description</label>
+            <textarea
+                id="jobDescription"
+                placeholder="Enter job requirements here..."
+                required
+            ></textarea>
+
+            <button type="submit" id="analyzeButton">
+                Analyse Resume
+            </button>
+        </form>
+
+        <p id="status"></p>
+
+        <section id="results" hidden>
+            <h2>Analysis Results</h2>
+
+            <div class="score-box">
+                <h3>Resume Match Score</h3>
+                <p id="score">0%</p>
+            </div>
+
+            <h3>Resume Skills</h3>
+            <p id="resumeSkills"></p>
+
+            <h3>Matching Skills</h3>
+            <p id="matchingSkills"></p>
+
+            <h3>Missing Skills</h3>
+            <p id="missingSkills"></p>
+
+            <h3>Suggestions</h3>
+            <ul id="suggestions"></ul>
+
+            <p class="note">
+                This score measures detected skill matches only.
+                It does not determine overall candidate suitability.
+            </p>
+        </section>
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
+
